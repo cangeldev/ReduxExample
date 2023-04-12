@@ -1,9 +1,13 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { Container } from './container'
+import { store } from './features/store'
+import { Provider } from 'react-redux'
 
 export default function App() {
   return (
-    <Container />
+    <Provider store={store}>
+      <Container />
+    </Provider>
   )
 }

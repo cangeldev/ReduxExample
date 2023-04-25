@@ -1,7 +1,7 @@
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { EditProfilePages, LoginPages, ProfilePages } from '../pages';
+import { EditProfilePages, ProfilePages } from '../pages';
 
 export const StackNavigator = () => {
 
@@ -10,16 +10,12 @@ export const StackNavigator = () => {
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen
-                    name='LoginPages'
-                    component={LoginPages}
+                    name='EditProfilePages'
+                    component={EditProfilePages}
                 />
                 <Stack.Screen
                     name='ProfilePages'
                     component={ProfilePages}
-                />
-                <Stack.Screen
-                    name='EditProfilePages'
-                    component={EditProfilePages}
                 />
             </Stack.Navigator>
         </NavigationContainer>
